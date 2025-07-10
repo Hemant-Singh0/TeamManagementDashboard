@@ -13,13 +13,31 @@ Follow the steps below to set up the project locally on your system.
 ### 🧱 1. Clone the Repository
 
 ```bash
-git clone https://github.com/madiscoffee/MadisCoffeeDashboard.git
-cd MadisCoffeeDashboard
+git clone https://github.com/Hemant-Singh0/TeamManagementDashboard.git
+cd TeamManagementDashboard
 ```
 
 ### ⚙️ 2. Install Backend Dependencies
 
 npm install
+
+### 📄 3. Setup Environment Variables for Backend
+
+Create a `.env` file in the root of your backend project, and add the following:
+
+```env
+PORT=8080
+DB_HOST=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<your-db-name>?retryWrites=true&w=majority
+JWT_SECRET=your_jwt_secret_here
+```
+
+🔐 DB_HOST: Replace username, password, and your-db-name with your actual MongoDB Atlas credentials.
+
+🛡️ JWT_SECRET: Use a long, secure, and random secret string for signing tokens.
+
+## 🔧 Example:
+
+DB_HOST=mongodb+srv://admin:admin123@cluster0.mongodb.net/teamdb?retryWrites=true&w=majority
 
 ## 🖥️ Running the Node.js Server
 
@@ -82,7 +100,5 @@ This will launch the React app locally in development mode at http://localhost:3
 
 Facing issues or have suggestions?
 Feel free to open an issue on the GitHub Issues Page.
-
-#### 📃 License
 
 Thank you for using Team Management Dashboard! 🙌
